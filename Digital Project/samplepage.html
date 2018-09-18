@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>gif test</title>
+	<link rel="stylesheet" type="text/css" href="normalize.css">
+	<style>
+	body {background-image:url('./img/back.jpg');}
+	a{display: block;height:105px; text-align: center; line-height: 100px; cursor:pointer;}
+	#scroll{width:605px;background:height:900px;position: absolute;right:0px;}
+	#selec{ width:450px; height:400px; border:5px solid #000000; position: fixed; left:140px; top:130px;  background:white; overflow: hidden;}
+	#selec li{ display: block; width:210px; height:65px; line-height: 60px; text-align: left; font-size:16pt;font-family:YDIYGO340; color:black;float:left;margin-left: 0px;border-radius: 5px;margin-top: 10px;}
+	#msg{ width:300px; height:50px; line-height: 50px; font-size: 1em; font-weight: bold; position: fixed; left: 250px; top: 680px; background: white; text-align: center; }
+
+	</style>
+	<script>
+		var stext='';
+
+		//1
+		var tripalone_flag=0;
+		function sleepallday() {
+			if (tripalone_flag==0){
+				stext = selec.innerHTML + '<li id="sleepallday" class="tag">하루종일 자기</li>';
+				selec.innerHTML = stext;
+ 				document.getElementById('a1').style.background='url(./img/sleepallday.gif)';
+ 				tripalone_flag=1;}
+			else{var elem = document.getElementById('sleepallday');
+				elem.parentNode.removeChild(elem)
+				document.getElementById('a1').style.background='url(./img/black-sleepallday.gif)';
+				tripalone_flag=0;}}
+		//2
+		var tripalone_flag=0;
+		function tripalone() {
+			if (tripalone_flag==0){
+				stext = selec.innerHTML + '<li id="tripalone" class="tag">혼자 여행가기</li>';
+				selec.innerHTML = stext;
+ 				document.getElementById('a2').style.background='url(./img/tripalone.gif)';
+ 				tripalone_flag=1;}
+			else{var elem = document.getElementById('tripalone');
+				elem.parentNode.removeChild(elem);
+				document.getElementById('a2').style.background='url(./img/black-tripalone.gif)';
+				tripalone_flag=0;}}
+		//3
+		var familytrip_flag=0;
+		function familytrip() {
+			if (familytrip_flag==0){
+				stext = selec.innerHTML + '<li id="familytrip" class="tag">부모님과 여행가기</li>';
+				selec.innerHTML = stext;
+ 				document.getElementById('a3').style.background='url(./img/familytrip.gif)';
+ 				familytrip_flag=1;}
+			else{var elem = document.getElementById('familytrip');
+				elem.parentNode.removeChild(elem);
+				document.getElementById('a3').style.background='url(./img/black-familytrip.gif)';
+				familytrip_flag=0;}}
+		//4
+		var worldtour_flag=0;
+		function worldtour() {
+			if (worldtour_flag==0){
+				stext = selec.innerHTML + '<li id="worldtour" class="tag">세계 일주</li>';
+				selec.innerHTML = stext;
+ 				document.getElementById('a4').style.background='url(./img/worldtour.gif)';
+ 				worldtour_flag=1;}
+			else{var elem = document.getElementById('worldtour');
+				elem.parentNode.removeChild(elem);
+				document.getElementById('a4').style.background='url(./img/black-worldtour.gif)';
+				worldtour_flag=0;}}
+		//5
+		var skydive_flag=0;
+		function skydive() {
+			if (skydive_flag==0){
+				stext = selec.innerHTML + '<li id="skydive" class="tag">스카이 다이빙</li>';
+				selec.innerHTML = stext;
+ 				document.getElementById('a5').style.background='url(./img/skydive.gif)';
+ 				skydive_flag=1;}
+			else{var elem = document.getElementById('skydive');
+				elem.parentNode.removeChild(elem);
+				document.getElementById('a5').style.background='url(./img/black-skydive.gif)';
+				skydive_flag=0;}}
+		//6
+		var apologize_flag=0;
+		function apologize() {
+			if (apologize_flag==0){
+				stext = selec.innerHTML + '<li id="apologize" class="tag">진심으로 사과하기</li>';
+				selec.innerHTML = stext;
+ 				document.getElementById('a6').style.background='url(./img/apologize.gif)';
+ 				apologize_flag=1;}
+			else{var elem = document.getElementById('apologize');
+				elem.parentNode.removeChild(elem);
+				document.getElementById('a6').style.background='url(./img/black-apologize.gif)';
+				apologize_flag=0;}}
+		//7
+		var spendmoney_flag=0;
+		function spendmoney() {
+			if (spendmoney_flag==0){
+				stext = selec.innerHTML + '<li id="spendmoney" class="tag">마음껏 돈 쓰기</li>';
+				selec.innerHTML = stext;
+ 				document.getElementById('a7').style.background='url(./img/spendmoney.gif)';
+ 				spendmoney_flag=1;}
+			else{var elem = document.getElementById('spendmoney');
+				elem.parentNode.removeChild(elem);
+				document.getElementById('a7').style.background='url(./img/black-spendmoney.gif)';
+				spendmoney_flag=0;}}
+		//8
+		var liveabroad_flag=0;
+		function liveabroad() {
+			if (liveabroad_flag==0){
+				stext = selec.innerHTML + '<li id="liveabroad" class="tag">외국에서 살아보기</li>';
+				selec.innerHTML = stext;
+ 				document.getElementById('a8').style.background='url(./img/liveabroad.gif)';
+ 				liveabroad_flag=1;}
+			else{var elem = document.getElementById('liveabroad');
+				elem.parentNode.removeChild(elem);
+				document.getElementById('a8').style.background='url(./img/black-liveabroad.gif)';
+				liveabroad_flag=0;}}
+		//9
+		var sayno_flag=0;
+		function sayno() {
+			if (sayno_flag==0){
+				stext = selec.innerHTML + '<li id="sayno" class="tag">싫다고 말하기</li>';
+				selec.innerHTML = stext;
+ 				document.getElementById('a9').style.background='url(./img/sayno.gif)';
+ 				sayno_flag=1;}
+			else{var elem = document.getElementById('sayno');
+				elem.parentNode.removeChild(elem);
+				document.getElementById('a9').style.background='url(./img/black-sayno.gif)';
+				sayno_flag=0;}}
+		//10
+		var quitjob_flag=0;
+		function quitjob() {
+			if (quitjob_flag==0){
+				stext = selec.innerHTML + '<li id="quitjob" class="tag">사표 내기</li>';
+				selec.innerHTML = stext;
+ 				document.getElementById('a10').style.background='url(./img/quitjob.gif)';
+ 				quitjob_flag=1;}
+			else{var elem = document.getElementById('quitjob');
+				elem.parentNode.removeChild(elem);
+				document.getElementById('a10').style.background='url(./img/black-quitjob.gif)';
+				quitjob_flag=0;}}
+		//11
+		var contactoldfriends_flag=0;
+		function contactoldfriends() {
+			if (contactoldfriends_flag==0){
+				stext = selec.innerHTML + '<li id="contactoldfriends" class="tag">옛 친구에게 연락하기</li>';
+				selec.innerHTML = stext;
+ 				document.getElementById('a11').style.background='url(./img/contactoldfriends.gif)';
+ 				contactoldfriends_flag=1;}
+			else{var elem = document.getElementById('contactoldfriends');
+				elem.parentNode.removeChild(elem);
+				document.getElementById('a11').style.background='url(./img/black-contactoldfriends.gif)';
+				contactoldfriends_flag=0;}}
+		//12
+		var playinstrument_flag=0;
+		function playinstrument() {
+			if (playinstrument_flag==0){
+				stext = selec.innerHTML + '<li id="playinstrument" class="tag">악기 연주 배우기</li>';
+				selec.innerHTML = stext;
+ 				document.getElementById('a12').style.background='url(./img/playinstrument.gif)';
+ 				playinstrument_flag=1;}
+			else{var elem = document.getElementById('playinstrument');
+				elem.parentNode.removeChild(elem);
+				document.getElementById('a12').style.background='url(./img/black-playinstrument.gif)';
+				playinstrument_flag=0;}}
+		//13
+		var marry_flag=0;
+		function marry() {
+			if (marry_flag==0){
+				stext = selec.innerHTML + '<li id="marry" class="tag">결혼하기</li>';
+				selec.innerHTML = stext;
+ 				document.getElementById('a13').style.background='url(./img/marry.gif)';
+ 				marry_flag=1;}
+			else{var elem = document.getElementById('marry');
+				elem.parentNode.removeChild(elem);
+				document.getElementById('a13').style.background='url(./img/black-marry.gif)';
+				marry_flag=0;}}
+		//14
+		var donothing_flag=0;
+		function donothing() {
+			if (donothing_flag==0){
+				stext = selec.innerHTML + '<li id="donothing" class="tag">아무것도 안 하기</li>';
+				selec.innerHTML = stext;
+ 				document.getElementById('a14').style.background='url(./img/donothing.gif)';
+ 				donothing_flag=1;}
+			else{var elem = document.getElementById('donothing');
+				elem.parentNode.removeChild(elem);
+				document.getElementById('a14').style.background='url(./img/black-donothing.gif)';
+				donothing_flag=0;}}
+		//15
+		var getjob_flag=0;
+		function getjob() {
+			if (getjob_flag==0){
+				stext = selec.innerHTML + '<li id="getjob" class="tag">원하는 직장 취업</li>';
+				selec.innerHTML = stext;
+ 				document.getElementById('a15').style.background='url(./img/getjob.gif)';
+ 				getjob_flag=1;}
+			else{var elem = document.getElementById('getjob');
+				elem.parentNode.removeChild(elem);
+				document.getElementById('a15').style.background='url(./img/black-getjob.gif)';
+				getjob_flag=0;}}
+		//16
+		var workingholiday_flag=0;
+		function workingholiday() {
+			if (workingholiday_flag==0){
+				stext = selec.innerHTML + '<li id="workingholiday" class="tag">워킹 홀리데이 가기</li>';
+				selec.innerHTML = stext;
+ 				document.getElementById('a16').style.background='url(./img/workingholiday.gif)';
+ 				workingholiday_flag=1;}
+			else{var elem = document.getElementById('workingholiday');
+				elem.parentNode.removeChild(elem);
+				document.getElementById('a16').style.background='url(./img/black-workingholiday.gif)';
+				workingholiday_flag=0;}}
+		//17
+		var diet_flag=0;
+		function diet() {
+			if (diet_flag==0){
+				stext = selec.innerHTML + '<li id="diet" class="tag">다이어트</li>';
+				selec.innerHTML = stext;
+ 				document.getElementById('a17').style.background='url(./img/diet.gif)';
+ 				diet_flag=1;}
+			else{var elem = document.getElementById('diet');
+				elem.parentNode.removeChild(elem);
+				document.getElementById('a17').style.background='url(./img/black-diet.gif)';
+				diet_flag=0;}}
+		//18
+		var fluentenglish_flag=0;
+		function fluentenglish() {
+			if (fluentenglish_flag==0){
+				stext = selec.innerHTML + '<li id="fluentenglish" class="tag">영어 능통해지기</li>';
+				selec.innerHTML = stext;
+ 				document.getElementById('a18').style.background='url(./img/fluentenglish.gif)';
+ 				fluentenglish_flag=1;}
+			else{var elem = document.getElementById('fluentenglish');
+				elem.parentNode.removeChild(elem);
+				document.getElementById('a18').style.background='url(./img/black-fluentenglish.gif)';
+				fluentenglish_flag=0;}}
+		//19
+		var getlicense_flag=0;
+		function getlicense() {
+			if (getlicense_flag==0){
+				stext = selec.innerHTML + '<li id="getlicense" class="tag">자격증 따기</li>';
+				selec.innerHTML = stext;
+ 				document.getElementById('a19').style.background='url(./img/getlicense.gif)';
+ 				getlicense_flag=1;}
+			else{var elem = document.getElementById('getlicense');
+				elem.parentNode.removeChild(elem);
+				document.getElementById('a19').style.background='url(./img/black-getlicense.gif)';
+				getlicense_flag=0;}}
+		//20
+		var newlanguage_flag=0;
+		function newlanguage() {
+			if (newlanguage_flag==0){
+				stext = selec.innerHTML + '<li id="newlanguage" class="tag">새로운 언어 배우기</li>';
+				selec.innerHTML = stext;
+ 				document.getElementById('a20').style.background='url(./img/newlanguage.gif)';
+ 				newlanguage_flag=1;}
+			else{var elem = document.getElementById('newlanguage');
+				elem.parentNode.removeChild(elem);
+				document.getElementById('a20').style.background='url(./img/black-newlanguage.gif)';
+				newlanguage_flag=0;}}
+		//21
+		var buyhouse_flag=0;
+		function buyhouse() {
+			if (buyhouse_flag==0){
+				stext = selec.innerHTML + '<li id="buyhouse" class="tag">내 집 마련</li>';
+				selec.innerHTML = stext;
+ 				document.getElementById('a21').style.background='url(./img/buyhouse.gif)';
+ 				buyhouse_flag=1;}
+			else{var elem = document.getElementById('buyhouse');
+				elem.parentNode.removeChild(elem);
+				document.getElementById('a21').style.background='url(./img/black-buyhouse.gif)';
+				buyhouse_flag=0;}}
+		//22
+		var volunteerabroad_flag=0;
+		function volunteerabroad() {
+			if (volunteerabroad_flag==0){
+				stext = selec.innerHTML + '<li id="volunteerabroad" class="tag">해외봉사 가기</li>';
+				selec.innerHTML = stext;
+ 				document.getElementById('a22').style.background='url(./img/volunteerabroad.gif)';
+ 				volunteerabroad_flag=1;}
+			else{var elem = document.getElementById('volunteerabroad');
+				elem.parentNode.removeChild(elem);
+				document.getElementById('a22').style.background='url(./img/black-volunteerabroad.gif)';
+				volunteerabroad_flag=0;}}
+		//23
+		var read_flag=0;
+		function read() {
+			if (read_flag==0){
+				stext = selec.innerHTML + '<li id="read" class="tag">책 100권 읽기</li>';
+				selec.innerHTML = stext;
+ 				document.getElementById('a23').style.background='url(./img/read.gif)';
+ 				read_flag=1;}
+			else{var elem = document.getElementById('read');
+				elem.parentNode.removeChild(elem);
+				document.getElementById('a23').style.background='url(./img/black-read.gif)';
+				read_flag=0;}}
+		//24
+		var forgive_flag=0;
+		function forgive() {
+			if (forgive_flag==0){
+				stext = selec.innerHTML + '<li id="forgive" class="tag">누군가를 용서하기</li>';
+				selec.innerHTML = stext;
+ 				document.getElementById('a24').style.background='url(./img/forgive.gif)';
+ 				forgive_flag=1;}
+			else{var elem = document.getElementById('forgive');
+				elem.parentNode.removeChild(elem);
+				document.getElementById('a24').style.background='url(./img/black-forgive.gif)';
+				forgive_flag=0;}}
+		//25
+		var lovelikeamovie_flag=0;
+		function lovelikeamovie() {
+			if (lovelikeamovie_flag==0){
+				stext = selec.innerHTML + '<li id="lovelikeamovie" class="tag">영화같은 사랑 하기</li>';
+				selec.innerHTML = stext;
+ 				document.getElementById('a25').style.background='url(./img/lovelikeamovie.gif)';
+ 				lovelikeamovie_flag=1;}
+			else{var elem = document.getElementById('lovelikeamovie');
+				elem.parentNode.removeChild(elem);
+				document.getElementById('a25').style.background='url(./img/black-lovelikeamovie.gif)';
+				lovelikeamovie_flag=0;}}
+		//26
+		var getfamous_flag=0;
+		function getfamous() {
+			if (getfamous_flag==0){
+				stext = selec.innerHTML + '<li id="getfamous" class="tag">유명해지기</li>';
+				selec.innerHTML = stext;
+ 				document.getElementById('a26').style.background='url(./img/getfamous.gif)';
+ 				getfamous_flag=1;}
+			else{var elem = document.getElementById('getfamous');
+				elem.parentNode.removeChild(elem);
+				document.getElementById('a26').style.background='url(./img/black-getfamous.gif)';
+				getfamous_flag=0;}}
+		//27
+		var startbusiness_flag=0;
+		function startbusiness() {
+			if (startbusiness_flag==0){
+				stext = selec.innerHTML + '<li id="startbusiness" class="tag">창업하기</li>';
+				selec.innerHTML = stext;
+ 				document.getElementById('a27').style.background='url(./img/startbusiness.gif)';
+ 				startbusiness_flag=1;}
+			else{var elem = document.getElementById('startbusiness');
+				elem.parentNode.removeChild(elem);
+				document.getElementById('a27').style.background='url(./img/black-startbusiness.gif)';
+				startbusiness_flag=0;}}
+		//28
+		var date_flag=0;
+		function date() {
+			if (date_flag==0){
+				stext = selec.innerHTML + '<li id="date" class="tag">미남/미녀와 데이트</li>';
+				selec.innerHTML = stext;
+ 				document.getElementById('a28').style.background='url(./img/date.gif)';
+ 				date_flag=1;}
+			else{var elem = document.getElementById('date');
+				elem.parentNode.removeChild(elem);
+				document.getElementById('a28').style.background='url(./img/black-date.gif)';
+				date_flag=0;}}
+		//29
+		var sickkie_flag=0;
+		function sickkie() {
+			if (sickkie_flag==0){
+				stext = selec.innerHTML + '<li id="sickkie" class="tag">병가 내고 놀러가기</li>';
+				selec.innerHTML = stext;
+ 				document.getElementById('a29').style.background='url(./img/sickkie.gif)';
+ 				sickkie_flag=1;}
+			else{var elem = document.getElementById('sickkie');
+				elem.parentNode.removeChild(elem);
+				document.getElementById('a29').style.background='url(./img/black-sickkie.gif)';
+				sickkie_flag=0;}}
+		//30
+		var saythanks_flag=0;
+		function saythanks() {
+			if (saythanks_flag==0){
+				stext = selec.innerHTML + '<li id="saythanks" class="tag">자격증 따기</li>';
+				selec.innerHTML = stext;
+ 				document.getElementById('a30').style.background='url(./img/saythanks.gif)';
+ 				saythanks_flag=1;}
+			else{var elem = document.getElementById('saythanks');
+				elem.parentNode.removeChild(elem);
+				document.getElementById('a30').style.background='url(./img/black-saythanks.gif)';
+				saythanks_flag=0;}}
+		//31
+		var study_flag=0;
+		function study() {
+			if (study_flag==0){
+				stext = selec.innerHTML + '<li id="study" class="tag">원하는 공부하기</li>';
+				selec.innerHTML = stext;
+ 				document.getElementById('a31').style.background='url(./img/black-study.gif)';
+ 				study_flag=1;}
+			else{var elem = document.getElementById('study');
+				elem.parentNode.removeChild(elem);
+				document.getElementById('a31').style.background='url(./img/black-study.gif)';
+				study_flag=0;}}
+		//32
+		var ghost_flag=0;
+		function ghost() {
+			if (ghost_flag==0){
+				stext = selec.innerHTML + '<li id="ghost" class="tag">완전히 혼자있기</li>';
+				selec.innerHTML = stext;
+ 				document.getElementById('a32').style.background='url(./img/ghost.gif)';
+ 				ghost_flag=1;}
+			else{var elem = document.getElementById('ghost');
+				elem.parentNode.removeChild(elem);
+				document.getElementById('a32').style.background='url(./img/black-ghost.gif)';
+				ghost_flag=0;}}
+		//33
+		var savemoney_flag=0;
+		function savemoney() {
+			if (savemoney_flag==0){
+				stext = selec.innerHTML + '<li id="savemoney" class="tag">돈 모으기</li>';
+				selec.innerHTML = stext;
+ 				document.getElementById('a33').style.background='url(./img/savemoney.gif)';
+ 				savemoney_flag=1;}
+			else{var elem = document.getElementById('savemoney');
+				elem.parentNode.removeChild(elem);
+				document.getElementById('a33').style.background='url(./img/black-savemoney.gif)';
+				savemoney_flag=0;}}
+		//34
+		var childrenstudy_flag=0;
+		function childrenstudy() {
+			if (childrenstudy_flag==0){
+				stext = selec.innerHTML + '<li id="childrenstudy" class="tag">자녀 유학 보내기</li>';
+				selec.innerHTML = stext;
+ 				document.getElementById('a34').style.background='url(./img/childrenstudy.gif)';
+ 				childrenstudy_flag=1;}
+			else{var elem = document.getElementById('childrenstudy');
+				elem.parentNode.removeChild(elem);
+				document.getElementById('a34').style.background='url(./img/black-childrenstudy.gif)';
+				childrenstudy_flag=0;}}
+		//35
+		var getindependent_flag=0;
+		function getindependent() {
+			if (getindependent_flag==0){
+				stext = selec.innerHTML + '<li id="getindependent class="tag"">독립하기</li>';
+				selec.innerHTML = stext;
+ 				document.getElementById('a35').style.background='url(./img/getindependent.gif)';
+ 				getindependent_flag=1;}
+			else{var elem = document.getElementById('getindependent');
+				elem.parentNode.removeChild(elem);
+				document.getElementById('a35').style.background='url(./img/black-getindependent.gif)';
+				getindependent_flag=0;}}
+		//36
+		var loan_flag=0;
+		function loan() {
+			if (loan_flag==0){
+				stext = selec.innerHTML + '<li id="loan" class="tag">대출 갚기</li>';
+				selec.innerHTML = stext;
+ 				document.getElementById('a36').style.background='url(./img/loan.gif)';
+ 				loan_flag=1;}
+			else{var elem = document.getElementById('loan');
+				elem.parentNode.removeChild(elem);
+				document.getElementById('a36').style.background='url(./img/black-loan.gif)';
+				loan_flag=0;}}
+		//37
+		var bestseller_flag=0;
+		function bestseller() {
+			if (bestseller_flag==0){
+				stext = selec.innerHTML + '<li id="bestseller" class="tag">베스트셀러 작가되기</li>';
+				selec.innerHTML = stext;
+ 				document.getElementById('a37').style.background='url(./img/bestseller.gif)';
+ 				bestseller_flag=1;}
+			else{var elem = document.getElementById('bestseller');
+				elem.parentNode.removeChild(elem);
+				document.getElementById('a37').style.background='url(./img/black-bestseller.gif)';
+				bestseller_flag=0;}}
+		//38
+		var instagramer_flag=0;
+		function instagramer() {
+			if (instagramer_flag==0){
+				stext = selec.innerHTML + '<li id="instagramer" class="tag">파워 인스타그래머되기</li>';
+				selec.innerHTML = stext;
+ 				document.getElementById('a38').style.background='url(./img/instagramer.gif)';
+ 				instagramer_flag=1;}
+			else{var elem = document.getElementById('instagramer');
+				elem.parentNode.removeChild(elem);
+				document.getElementById('a38').style.background='url(./img/black-instagramer.gif)';
+				instagramer_flag=0;}}
+		//39
+		var moneyback_flag=0;
+		function moneyback() {
+			if (moneyback_flag==0){
+				stext = selec.innerHTML + '<li id="moneyback" class="tag">빌려준 돈 받기</li>';
+				selec.innerHTML = stext;
+ 				document.getElementById('a39').style.background='url(./img/moneyback.gif)';
+ 				moneyback_flag=1;}
+			else{var elem = document.getElementById('moneyback');
+				elem.parentNode.removeChild(elem);
+				document.getElementById('a39').style.background='url(./img/black-moneyback.gif)';
+				moneyback_flag=0;}}
+		//40
+		var bettergrade_flag=0;
+		function bettergrade() {
+			if (bettergrade_flag==0){
+				stext = selec.innerHTML + '<li id="bettergrade" class="tag">성적 올리기</li>';
+				selec.innerHTML = stext;
+ 				document.getElementById('a40').style.background='url(./img/bettergrade.gif)';
+ 				bettergrade_flag=1;}
+			else{var elem = document.getElementById('bettergrade');
+				elem.parentNode.removeChild(elem);
+				document.getElementById('a40').style.background='url(./img/black-bettergrade.gif)';
+				bettergrade_flag=0;}}
+		function cal(){
+			var t =  document.getElementsByClassName("tag");
+			var k = 10 - t.length;
+			if(k == 0){
+				msg.innerHTML = "<a href='3.html' target='_self'>결과를 보시겠습니까?</a>";
+			}else{
+				msg.innerHTML = k + "개의 항목을 선택하세요.";
+			}
+			console.log(k);
+		}
+	</script>
+</head>
+<body>
+	<ul id="selec">
+		
+	</ul>
+	<p id="msg">10개의 항목을 선택하세요.</p>
+	<div id="scroll">
+		<a id="a1" onclick="sleepallday();cal();" style="background: url('./img/black-sleepallday.gif');"></a>
+		<a id="a2" onclick="tripalone();cal();" style="background: url('./img/black-tripalone.gif');"></a>
+		<a id="a3" onclick="familytrip();cal();;" style="background: url('./img/black-familytrip.gif');"></a>
+		<a id="a4" onclick="worldtour();cal();" style="background: url('./img/black-worldtour.gif');"></a>
+		<a id="a5" onclick="skydive();cal();" style="background: url('./img/black-skydive.gif');"></a>
+		<a id="a6" onclick="apologize();cal()" style="background: url('./img/black-apologize.gif');"></a>
+		<a id="a7" onclick="spendmoney();cal()" style="background: url('./img/black-spendmoney.gif');"></a>
+		<a id="a8" onclick="liveabroad();cal()" style="background: url('./img/black-liveabroad.gif');"></a>
+		<a id="a9" onclick="sayno();cal()" style="background: url('./img/black-sayno.gif');"></a>
+		<a id="a10" onclick="quitjob();cal()" style="background: url('./img/black-quitjob.gif');"></a>
+		<a id="a11" onclick="contactoldfriends();cal()" style="background: url('./img/black-contactoldfriends.gif');"></a>
+		<a id="a12" onclick="playinstrument();cal()" style="background: url('./img/black-playinstrument.gif');"></a>
+		<a id="a13" onclick="marry();cal()" style="background: url('./img/black-marry.gif');"></a>
+		<a id="a14" onclick="donothing();cal()" style="background: url('./img/black-donothing.gif');"></a>
+		<a id="a15" onclick="getjob();cal()" style="background: url('./img/black-getjob.gif');"></a>
+		<a id="a16" onclick="workingholiday();cal()" style="background: url('./img/black-workingholiday.gif');"></a>
+		<a id="a17" onclick="diet();cal()" style="background: url('./img/black-diet.gif');"></a>
+		<a id="a18" onclick="fluentenglish();cal()" style="background: url('./img/black-fluentenglish.gif');"></a>
+		<a id="a19" onclick="getlicense();cal()" style="background: url('./img/black-getlicense.gif');"></a>
+		<a id="a20" onclick="newlanguage();cal()" style="background: url('./img/black-newlanguage.gif');"></a>
+		<a id="a21" onclick="buyhouse();cal()" style="background: url('./img/black-buyhouse.gif');"></a>
+		<a id="a22" onclick="volunteerabroad();cal()" style="background: url('./img/black-volunteerabroad.gif');"></a>
+		<a id="a23" onclick="read();cal()" style="background: url('./img/black-read.gif');"></a>
+		<a id="a24" onclick="forgive();cal()" style="background: url('./img/black-forgive.gif');"></a>
+		<a id="a25" onclick="lovelikeamovie();cal()" style="background: url('./img/black-lovelikeamovie.gif');"></a>
+		<a id="a26" onclick="getfamous();cal()" style="background: url('./img/black-getfamous.gif');"></a>
+		<a id="a27" onclick="startbusiness();cal()" style="background: url('./img/black-startbusiness.gif');"></a>
+		<a id="a28" onclick="date();cal()" style="background: url('./img/black-date.gif');"></a>
+		<a id="a29" onclick="sickkie();cal()" style="background: url('./img/black-sickkie.gif');"></a>
+		<a id="a30" onclick="saythanks();cal()" style="background: url('./img/black-saythanks.gif');"></a>
+		<a id="a31" onclick="study();cal()" style="background: url('./img/black-study.gif');"></a>
+		<a id="a32" onclick="ghost();cal()" style="background: url('./img/black-ghost.gif');"></a>
+		<a id="a33" onclick="savemoney();cal()" style="background: url('./img/black-savemoney.gif');"></a>
+		<a id="a34" onclick="childrenstudy();cal()" style="background: url('./img/black-childrenstudy.gif');"></a>
+		<a id="a35" onclick="getindependent();cal()" style="background: url('./img/black-getindependent.gif');"></a>
+		<a id="a36" onclick="loan();cal()" style="background: url('./img/black-loan.gif');"></a>
+		<a id="a37" onclick="bestseller();cal()" style="background: url('./img/black-bestseller.gif');"></a>
+		<a id="a38" onclick="instagramer();cal()" style="background: url('./img/black-instagramer.gif');"></a>
+		<a id="a39" onclick="moneyback();cal()" style="background: url('./img/black-moneyback.gif');"></a>
+		<a id="a40" onclick="bettergrade();cal()" style="background: url('./img/black-bettergrade.gif');"></a>
+		<a id="a42" onclick="this.style.background = 'url(./img/lottery.gif)'; stext = selec.innerHTML + '<li>복권 당첨</li>'; selec.innerHTML = stext; " style="background: url('./img/black-lottery.gif');"></a>
+		<a id="a43" onclick="this.style.background = 'url(./img/movie.gif)'; stext = selec.innerHTML + '<li>밤새 영화보기</li>'; selec.innerHTML = stext; " style="background: url('./img/black-movie.gif');"></a>
+		<a id="a44" onclick="this.style.background = 'url(./img/precious-people.gif)'; stext = selec.innerHTML + '<li>소중한 사람 자주 보기</li>'; selec.innerHTML = stext; " style="background: url('./img/black-precious-people.gif');"></a>
+		<a id="a45" onclick="this.style.background = 'url(./img/contactoldfriends.gif)'; stext = selec.innerHTML + '<li>옛 친구에게 연락하기</li>'; selec.innerHTML = stext; " style="background: url('./img/black-contactoldfriends.gif');"></a>
+		<a id="a45" onclick="this.style.background = 'url(./img/contactoldfriends.gif)'; stext = selec.innerHTML + '<li>승진하기></li>'; selec.innerHTML = stext; " style="background: url('./img/black-contactoldfriends.gif');"></a>
+		
+	</div>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<script type="text/javascript">
+ 
+var selectList_cache; // Variable for remember previous choice
+ 
+function validateList(val)
+{
+  if(isValid())
+  {
+     alert("Validated successfully!");
+  }
+  else
+  {
+     alert("Failed the validation so reverting");
+     document.getElementById("selectList").value=selectList_cache;
+  }
+}
+</script>
+
+	<select name="selectList" id="selectList" onclick="selectList_cache=this.value" onchange="validateList(this.value);return false">
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+</select>
